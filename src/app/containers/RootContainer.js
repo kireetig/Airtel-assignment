@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 import HomeContainer from './HomeContainer';
 import Root from '../components/Root';
 import { initRouter, navigateTo } from '../actions/RouterActions';
-import {INDEX_PATH} from "../constants/RouterConstants";
+import {CART, INDEX_PATH, ORDER_PLACED} from "../constants/RouterConstants";
+import CartContainer from "./CartContainer";
+import OrderPlacedComponent from "../components/OrderPlaced";
 
 
 const RootContainer = props => <Root {...props} />;
@@ -12,10 +14,12 @@ const mapStateToProps = (state) => {
     const { router } = state;
 
     return {
-        paths: [INDEX_PATH],
+        paths: [INDEX_PATH, CART, ORDER_PLACED],
         router,
         routes: {
             [INDEX_PATH]: HomeContainer,
+            [CART]: CartContainer,
+            [ORDER_PLACED]: OrderPlacedComponent
         },
     };
 };

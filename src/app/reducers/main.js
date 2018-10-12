@@ -1,8 +1,9 @@
-import {GET_BURGERS} from "../constants/ActionTypes";
+import {GET_BURGERS, UPDATE_PRODUCTS} from "../constants/ActionTypes";
 
 
 const initialState = {
     allProducts: [],
+    filteredProducts: []
 };
 
 export default function (state = initialState, action) {
@@ -10,7 +11,13 @@ export default function (state = initialState, action) {
         case GET_BURGERS:
             return {
                 ...state,
-                allProducts: action.payload
+                allProducts: action.payload,
+                filteredProducts: action.payload
+            };
+        case UPDATE_PRODUCTS:
+            return {
+                ...state,
+                filteredProducts: action.payload
             };
         default:
             return state;

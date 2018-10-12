@@ -1,4 +1,4 @@
-import {UPDATE_CART} from "../constants/ActionTypes";
+import {ADD_CART_ITEM} from "../constants/ActionTypes";
 
 const initialState = {
     items: [],
@@ -6,10 +6,23 @@ const initialState = {
 
 export default function (state = initialState, action) {
     switch (action.type) {
-        case UPDATE_CART:
+        case ADD_CART_ITEM:
+            const items = state.items;
+            let j = null;
+            for(let i=0; i < items.length; i++){
+                if(items[i].id === action.payload.id){
+                   j = i;
+                }
+            }
+            if(j !== null) {
+                items[j].quantity = action.payload.quantity;
+            }else{
+                items.push(action.payload);
+            }
+            console.log(items);
             return {
                 ...state,
-                items: action.payload
+                items
             };
         default:
             return state;

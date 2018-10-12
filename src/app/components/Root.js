@@ -26,7 +26,7 @@ class Root extends React.Component {
         const { router, routes, navigateTo } = this.props;
         return (
             <div>
-                <Navbar />
+                <Navbar navigateTo={this.props.navigateTo}/>
                 <Router router={router} routes={routes} navigateTo={navigateTo} />
             </div>
         );

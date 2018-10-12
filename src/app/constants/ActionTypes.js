@@ -1,3 +1,4 @@
-export const UPDATE_CART= 'UPDATE_CART';
 export const CHANGE_ROUTE = 'CHANGE_ROUTE';
 export const GET_BURGERS = 'GET_BURGERS';
+export const ADD_CART_ITEM = 'ADD_CART_ITEM';
+export const UPDATE_PRODUCTS = 'UPDATE_PRODUCTS';

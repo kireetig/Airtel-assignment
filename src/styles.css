@@ -49,3 +49,11 @@
     margin: auto;
     margin-bottom: 5rem;
 }
+
+.pointer{
+    cursor: pointer;
+}
+
+.border-all{
+    border: 1px solid grey;
+}
