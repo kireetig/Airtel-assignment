@@ -1,7 +1,8 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import store from './store';
-import RootContainer from './containers/RootContainer';
+import store from './app/store';
+import RootContainer from './app/containers/RootContainer';
+import './styles.css';
 
 function App() {
     return (

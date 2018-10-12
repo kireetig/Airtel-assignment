@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Router from '../components/Router';
-import Navbar from '../components/Navbar';
+import Router from './Router';
+import Navbar from './Navbar';
 
 const propTypes = {
     initRouter: PropTypes.func.isRequired,

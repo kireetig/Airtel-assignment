@@ -11,6 +11,7 @@ const propTypes = {
     navigateTo: PropTypes.func.isRequired,
 };
 
+
 const Router = ({ router, routes, navigateTo }) => {
     const { path } = router.route;
     if (path in routes) {
@@ -23,5 +24,6 @@ const Router = ({ router, routes, navigateTo }) => {
 };
 
 Router.propTypes = propTypes;
+// PropTypes.checkPropTypes(propTypes, props, 'prop', 'Router');
 
 export default Router;

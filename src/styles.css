@@ -1,0 +1,51 @@
+
+.item-count {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 64px;
+}
+
+.add-item-control {
+    font-size: 18px;
+    font-weight: bold;
+    background: none;
+}
+
+.add-item-control:focus {
+    outline: none;
+}
+
+.add-item-control:disabled {
+    color: gray;
+}
+
+.left-control {
+    border: 1px gray solid;
+    padding: 7px 18px;
+    border-radius: 20px 0 0 20px;
+    float: right;
+}
+
+.right-control {
+    border: 1px gray solid;
+    padding: 7px 18px;
+    border-radius: 0 20px 20px 0;
+    float: left;
+}
+
+.item-count {
+    border: 1px solid gray;
+    padding: 7px 18px;
+}
+
+.card-rating{
+    text-align: left;
+    margin-left: 1.4rem;
+}
+
+.view-card{
+    width: 400px;
+    margin: auto;
+    margin-bottom: 5rem;
+}
