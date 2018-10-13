@@ -39,7 +39,7 @@ class CartComponent extends React.Component {
             </div>
             <div className="row">
                 {this.props.cartItems.map((item) => {
-                    total = total + parseInt(item.price, 10);
+                    total = total + (parseInt(item.price, 10)*item.quantity);
                     return (<div className="col-12" key={item.id}>
                     <div className="row">
                         <div className="col-8 border-all">
@@ -47,7 +47,7 @@ class CartComponent extends React.Component {
                             <p>Quantity: {item.quantity}</p>
                         </div>
                         <div className="col-4 border-all">
-                            RS. {item.price}
+                            RS. {item.quantity*item.price}
                         </div>
                     </div>
                     </div>)
